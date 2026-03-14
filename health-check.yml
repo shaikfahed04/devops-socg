@@ -6,7 +6,7 @@ become: postgres
 - task:
     name: Check the postgres db status
     shell: sudo systemctl status postgresql.service
-    register: {{status}}
+    register: status
 
 - task:
     name: print the status
