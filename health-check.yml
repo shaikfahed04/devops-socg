@@ -1,0 +1,14 @@
+host: all
+become_user: yes
+become: postgres
+
+
+- task:
+    name: Check the postgres db status
+    shell: sudo systemctl status postgresql.service
+    register: {{status}}
+
+- task:
+    name: print the status
+    debug:
+      var: status
