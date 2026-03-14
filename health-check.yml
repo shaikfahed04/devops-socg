@@ -5,7 +5,7 @@ become: postgres
 
 - task:
     name: Check the postgres db status
-    shell: pg_ctl status postgresql.service
+    shell: pg_ctl status
     register: status
 
 - task:
