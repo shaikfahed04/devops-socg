@@ -1,12 +1,12 @@
 ---
 hosts: all
-become_user: yes
-become: postgres
+become: yes
+become_user: postgres
 gather_facts: no
 
 tasks:
   - name: Start the postgresql db
     service:
       name: postgresql
-      state: start
+      state: started
 
